@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🏠 House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>🏠 House Price Prediction</h2>
+    <form action="/predict" method="POST">
+
+        <label>Area (sq ft):</label><br>
+        <input type="number" name="area" required><br><br>
+
+        <label>Bedrooms:</label><br>
+        <input type="number" name="bedrooms" required><br><br>
+
+        <label>Bathrooms:</label><br>
+        <input type="number" name="bathrooms" required><br><br>
+
+        <label>Stories:</label><br>
+        <input type="number" name="stories" required><br><br>
+
+        <label>Mainroad:</label><br>
+        <select name="mainroad" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Guestroom:</label><br>
+        <select name="guestroom" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Basement:</label><br>
+        <select name="basement" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Hot Water Heating:</label><br>
+        <select name="hotwaterheating" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Airconditioning:</label><br>
+        <select name="airconditioning" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Parking:</label><br>
+        <input type="number" name="parking" min="0" max="5" required><br><br>
+
+        <label>Prefarea:</label><br>
+        <select name="prefarea" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Furnishing Status:</label><br>
+        <select name="furnishingstatus" required>
+            <option value="2">Furnished</option>
+            <option value="1">Semi-Furnished</option>
+            <option value="0">Unfurnished</option>
+        </select><br><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+</body>
+</html>
